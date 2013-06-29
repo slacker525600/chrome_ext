@@ -1,0 +1,22 @@
+{
+  "manifest_version": 4,
+
+  "name": "slacker525600 Basic Reddit Filter",
+  "description": "Basically provide a nsfw filter",
+  "version": "0.2",
+  "content_scripts": [
+    {
+      "matches": ["http://www.reddit.com/*", "https://www.reddit.com/*"],
+      "js": [ "hide_code.js"]
+    }
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "mynewtab.html" 
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
+
